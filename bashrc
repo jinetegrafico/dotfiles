@@ -1,4 +1,8 @@
 #  Filename: .bashrc
+uname -smr
+echo -e "\e[94mWelcome to Fedora 20"
+echo -e "Have fun!\e[0m"
+echo
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -9,12 +13,6 @@ fi
 # export SYSTEMD_PAGER=
 
 # Promt
-PS1="[\u@\h]$ "
+PS1="\e[96m\u@\h$\e[0m [$(git branch 2>/dev/null)]$ "
 
-# Bash completion
-if [-f /etc/bash_completion.d ]; then
-./etc/bash_completion
-fi
-
-export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
